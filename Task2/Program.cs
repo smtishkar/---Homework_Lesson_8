@@ -9,7 +9,6 @@
 Console.Clear();
 int columns = 5;
 int rows = 5;
-int max = 0;
 
 int[,] array = GetArray(columns, rows, 0, 9);
 PrintArray(array);
