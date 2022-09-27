@@ -35,8 +35,6 @@ int[,] GetSpiralMatrix(int rows, int columns)
         else
             i--;
         step++;
-
-        Console.WriteLine($"{array[i, j]} ");
     }
     return array;
 }
@@ -47,7 +45,7 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i, j]} ");
+            Console.Write($"{array[i, j]}\t ");
         }
         Console.WriteLine();
     }
