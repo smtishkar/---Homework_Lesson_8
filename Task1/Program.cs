@@ -20,7 +20,6 @@ int[,] CorrectArray(int[,] myarray)
 {
     int rows = myarray.GetLength(0);
     int columns = myarray.GetLength(1);
-    // int temp = 0;
 
     for (int i = 0; i < myarray.GetLength(0); i++)
     {
@@ -36,16 +35,12 @@ int[,] CorrectArray(int[,] myarray)
                     myarray[i, j] = myarray[i, j + 1];
                     myarray[i, j + 1] = min;
                 }
-                // Console.Write($"{myarray[i, j]}, {myarray[i, j + 1]} ");
-                // Console.WriteLine();
-
             }
-            iteration ++;
+            iteration++;
         }
     }
     return myarray;
 }
-
 
 int[,] GetArray(int m, int n, int minValue, int maxValue)
 {
@@ -56,7 +51,6 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
         {
             arr[i, j] = new Random().Next(minValue, maxValue + 1);
         }
-
     }
     return arr;
 }
