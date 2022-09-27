@@ -18,6 +18,7 @@ PrintArray(array);
 
 int[,,] GetArray(int m, int n, int l, int minValue, int maxValue)
 {
+    int count = 10;
     int[,,] arr = new int[m, n, l];
     for (int i = 0; i < m; i++)
     {
@@ -25,11 +26,10 @@ int[,,] GetArray(int m, int n, int l, int minValue, int maxValue)
         {
             for (int k = 0; k < l; k++)
             {
-                arr[i, j, k] = new Random().Next(minValue, maxValue + 1);
+                arr[i, j, k] = count;
+                count++;
             }
-
         }
-
     }
     return arr;
 }
@@ -58,3 +58,25 @@ void PrintArray(int[,,] array)
         Console.WriteLine("====================================");
     }
 }
+
+
+
+// Метод заполнения массива рандомными числами
+
+// int[,,] GetArray(int m, int n, int l, int minValue, int maxValue)
+// {
+//     int[,,] arr = new int[m, n, l];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             for (int k = 0; k < l; k++)
+//             {
+//                 arr[i, j, k] = new Random().Next(minValue, maxValue + 1);
+//             }
+
+//         }
+
+//     }
+//     return arr;
+// }
